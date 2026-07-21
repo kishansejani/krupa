@@ -1300,16 +1300,22 @@ h1, h2, h3, h4, h5, h6 {
     transition: left 0.4s cubic-bezier(0.85, 0, 0.15, 1);
     border-top: 1px solid var(--border-color);
   }
+  [data-theme="light"] .nav-links {
+    background: rgba(255, 255, 255, 0.95);
+  }
   .nav-links.open {
     left: 0;
   }
   .nav-links a {
     font-size: 1.35rem;
     font-weight: 600;
-    color: var(--text-highlight);
+    color: #ffffff; /* always light on dark menu */
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+  }
+  [data-theme="light"] .nav-links a {
+    color: var(--text-highlight); /* dark text on light menu */
   }
   .nav-links a:hover,
   .nav-links a.active {
