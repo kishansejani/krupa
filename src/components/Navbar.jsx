@@ -41,7 +41,7 @@ export default function Navbar({ theme, toggleTheme, activeSection }) {
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           
-          <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem' }}>
+          <a href="#contact" className="btn btn-primary nav-cta" style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem' }}>
             Let's Talk <Send size={14} />
           </a>
 
