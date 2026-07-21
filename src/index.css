@@ -1365,6 +1365,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left !important;
     padding-left: 3rem !important;
     padding-right: 0 !important;
+    left: 0 !important;
   }
   .timeline-item.left .timeline-dot,
   .timeline-item.right .timeline-dot {
