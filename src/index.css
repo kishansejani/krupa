@@ -1289,17 +1289,33 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background: var(--bg-secondary);
+    background: rgba(11, 12, 16, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 2.2rem;
+    transition: left 0.4s cubic-bezier(0.85, 0, 0.15, 1);
     border-top: 1px solid var(--border-color);
   }
   .nav-links.open {
     left: 0;
+  }
+  .nav-links a {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-highlight);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-glow);
+    transform: scale(1.1);
   }
   .nav-cta {
     display: none !important;
@@ -1360,8 +1376,10 @@ h1, h2, h3, h4, h5, h6 {
   .timeline-container::after {
     left: 20px;
   }
-  .timeline-item {
-    width: 100%;
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100% !important;
     text-align: left !important;
     padding-left: 3rem !important;
     padding-right: 0 !important;
