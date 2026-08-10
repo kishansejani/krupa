@@ -1,4 +1,5 @@
 import React from 'react';
+import TiltCard from './TiltCard';
 
 export default function Timeline() {
   const timelineData = [
@@ -86,7 +87,7 @@ export default function Timeline() {
           {timelineData.map((item, idx) => (
             <div key={idx} className={`timeline-item ${item.side}`}>
               <div className="timeline-dot"></div>
-              <div className="glass-card timeline-card">
+              <TiltCard className="glass-card timeline-card">
                 <span className="timeline-date">{item.date}</span>
                 <h3 className="timeline-role">{item.role}</h3>
                 <h4 className="timeline-company">{item.company}</h4>
@@ -95,7 +96,7 @@ export default function Timeline() {
                     <li key={dIdx}>{detail}</li>
                   ))}
                 </ul>
-              </div>
+              </TiltCard>
             </div>
           ))}
         </div>

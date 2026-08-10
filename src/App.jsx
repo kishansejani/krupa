@@ -11,6 +11,8 @@ import CaseStudy from './components/CaseStudy';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Background3D from './components/Background3D';
+import CustomCursor from './components/CustomCursor';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
@@ -34,7 +36,7 @@ export default function App() {
     
     const observerOptions = {
       root: null,
-      rootMargin: '-30% 0px -60% 0px', // Trigger when section occupies the middle portion of the screen
+      rootMargin: '-30% 0px -60% 0px',
       threshold: 0
     };
 
@@ -56,6 +58,8 @@ export default function App() {
 
   return (
     <>
+      <CustomCursor />
+      <ScrollToTop />
       <Background3D theme={theme} />
       <Navbar theme={theme} toggleTheme={toggleTheme} activeSection={activeSection} />
       <main>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Layers } from 'lucide-react';
+import TiltCard from './TiltCard';
 
 const GithubIcon = ({ size = 20, ...props }) => (
   <svg
@@ -78,9 +79,9 @@ export default function Projects() {
     },
     {
       title: "Venue Booking App",
-      subtitle: "Event Venue Scheduling Portal",
-      description: "Ongoing development project facilitating virtual tours, slot booking calendars, and advance payment options for wedding halls and event spaces.",
-      tags: ["Flutter", "Dart", "Custom Calendars", "REST APIs"],
+      subtitle: "Slot Reservation & Payment Portal",
+      description: "Interactive venue discovery app featuring dynamic date pickers, slot scheduling engine, map distance filtering, user reviews, and online booking receipts.",
+      tags: ["Flutter", "Dart", "Stripe API", "Google Maps"],
       category: "society",
       demoLink: "#",
       githubLink: "#"
@@ -129,7 +130,7 @@ export default function Projects() {
 
         <div className="projects-grid">
           {filteredProjects.map((project, idx) => (
-            <div key={idx} className="glass-card project-card">
+            <TiltCard key={idx} className="glass-card project-card">
               <div>
                 <div className="project-tags">
                   {project.tags.map((tag, tIdx) => (
@@ -150,7 +151,7 @@ export default function Projects() {
                   <ExternalLink size={16} /> Live Demo
                 </a>
               </div>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

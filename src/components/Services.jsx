@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, Cpu, Cloud, Settings, Layers, PlaySquare } from 'lucide-react';
+import TiltCard from './TiltCard';
 
 export default function Services() {
   const services = [
@@ -45,13 +46,13 @@ export default function Services() {
 
         <div className="services-grid">
           {services.map((service, idx) => (
-            <div key={idx} className="glass-card service-card">
+            <TiltCard key={idx} className="glass-card service-card">
               <div className="service-icon">
                 {service.icon}
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

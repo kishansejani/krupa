@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, Shield, Code, Award, CheckCircle } from 'lucide-react';
+import TiltCard from './TiltCard';
 
 export default function About() {
   const coreAnchors = [
@@ -21,7 +22,7 @@ export default function About() {
   ];
 
   const stats = [
-    { value: "3+", label: "Years Exp" },
+    { value: "2+", label: "Years Exp" },
     { value: "10+", label: "Apps Shipped" },
     { value: "100%", label: "Satisfaction" },
     { value: "99.9%", label: "Crash-free Rate" }
@@ -69,7 +70,7 @@ export default function About() {
 
           <div className="about-cards">
             {coreAnchors.map((anchor, idx) => (
-              <div key={idx} className="glass-card about-card">
+              <TiltCard key={idx} className="glass-card about-card">
                 <div className="about-card-icon">
                   {anchor.icon}
                 </div>
@@ -77,17 +78,17 @@ export default function About() {
                   <h3>{anchor.title}</h3>
                   <p>{anchor.description}</p>
                 </div>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>
 
         <div className="stats-container">
           {stats.map((stat, idx) => (
-            <div key={idx} className="glass-card stat-item">
+            <TiltCard key={idx} className="glass-card stat-item">
               <span className="stat-number">{stat.value}</span>
               <span className="stat-label">{stat.label}</span>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

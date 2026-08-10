@@ -84,8 +84,8 @@ export default function Background3D({ theme }) {
     // Dynamic color depending on theme
     const getThemeColors = () => {
       return theme === 'dark' 
-        ? 'rgba(102, 252, 241, 1)'  // Glowing Cyan for Dark Mode
-        : 'rgba(13, 148, 136, 1)';   // Deep Teal for Light Mode
+        ? 'rgba(255, 59, 141, 1)'  // Glowing Hot Pink for Dark Mode
+        : 'rgba(219, 39, 119, 1)';   // Deep Rose Pink for Light Mode
     };
 
     // Main animation loop

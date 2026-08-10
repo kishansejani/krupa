@@ -1,42 +1,42 @@
 /* Krupa Sejani Portfolio Custom Design System */
 
 :root {
-  /* Default Dark Mode Palette */
-  --bg-primary: #0b0c10;
-  --bg-secondary: #1f2833;
-  --bg-tertiary: #151a22;
-  --text-primary: #c5c6c7;
-  --text-secondary: #8f9296;
+  /* Default Dark Mode Palette - Feminine Pink Theme */
+  --bg-primary: #0d0b14;
+  --bg-secondary: #1a1525;
+  --bg-tertiary: #14101f;
+  --text-primary: #e2d9eb;
+  --text-secondary: #a397b5;
   --text-highlight: #ffffff;
-  --accent-color: #66fcf1;
-  --accent-secondary: #45f3ff;
-  --accent-muted: rgba(102, 252, 241, 0.15);
-  --accent-glow: rgba(102, 252, 241, 0.4);
-  --border-color: #2b3543;
+  --accent-color: #ff3b8d;
+  --accent-secondary: #ff75b5;
+  --accent-muted: rgba(255, 59, 141, 0.15);
+  --accent-glow: rgba(255, 59, 141, 0.4);
+  --border-color: #2d2238;
   --card-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
-  --glass-bg: rgba(31, 40, 51, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(26, 21, 37, 0.6);
+  --glass-border: rgba(255, 59, 141, 0.12);
 
   --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'Fira Code', ui-monospace, monospace;
 }
 
 [data-theme="light"] {
-  /* Light Mode Palette */
-  --bg-primary: #f4f6f9;
+  /* Light Mode Palette - Feminine Rose Pink Theme */
+  --bg-primary: #fff5f8;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #eef2f7;
-  --text-primary: #334155;
-  --text-secondary: #64748b;
-  --text-highlight: #0f172a;
-  --accent-color: #0d9488;
-  --accent-secondary: #0f766e;
-  --accent-muted: rgba(13, 148, 136, 0.12);
-  --accent-glow: rgba(13, 148, 136, 0.3);
-  --border-color: #cbd5e1;
-  --card-shadow: rgba(15, 23, 42, 0.08) 0px 8px 24px;
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(13, 148, 136, 0.1);
+  --bg-tertiary: #fce8f0;
+  --text-primary: #3b1c2b;
+  --text-secondary: #705263;
+  --text-highlight: #1f0b16;
+  --accent-color: #db2777;
+  --accent-secondary: #be185d;
+  --accent-muted: rgba(219, 39, 119, 0.12);
+  --accent-glow: rgba(219, 39, 119, 0.3);
+  --border-color: #f3cad9;
+  --card-shadow: rgba(59, 28, 43, 0.08) 0px 8px 24px;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(219, 39, 119, 0.15);
 }
 
 * {
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background: var(--accent-color);
-  color: #0b0c10 !important;
+  color: #ffffff !important;
   border: 1px solid var(--accent-color);
   box-shadow: 0 4px 14px var(--accent-glow);
 }
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   color: var(--accent-color) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 252, 241, 0.2);
+  box-shadow: 0 6px 20px var(--accent-glow);
 }
 
 .btn-secondary {
@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .term-btn:hover {
   background: var(--accent-color);
-  color: #0b0c10;
+  color: #ffffff;
   border-color: var(--accent-color);
 }
 
@@ -480,21 +480,66 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  padding: 1.6rem;
+  border-radius: 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-color), var(--accent-secondary));
+  opacity: 0.6;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.about-card:hover::before {
+  width: 6px;
+  opacity: 1;
+}
+
+.about-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 28px var(--accent-glow);
+  transform: translateY(-4px);
 }
 
 .about-card-icon {
   background: var(--accent-muted);
   color: var(--accent-color);
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 1.1rem;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--accent-muted);
+}
+
+.about-card:hover .about-card-icon {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: scale(1.12) rotate(6deg);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .about-card-info h3 {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.about-card:hover .about-card-info h3 {
+  color: var(--accent-color);
 }
 
 .about-card-info p {
@@ -512,7 +557,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .stat-item {
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 2.2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+  opacity: 0.7;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.stat-item:hover::before {
+  height: 6px;
+  opacity: 1;
+}
+
+.stat-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 32px var(--accent-glow);
 }
 
 .stat-number {
@@ -522,7 +597,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   line-height: 1;
   margin-bottom: 0.5rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.08);
 }
 
 .stat-label {
@@ -530,6 +610,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 /* Skills Section */
@@ -555,7 +636,7 @@ h1, h2, h3, h4, h5, h6 {
 .tab-btn:hover,
 .tab-btn.active {
   background: var(--accent-color);
-  color: #0b0c10;
+  color: #ffffff;
   border-color: var(--accent-color);
 }
 
@@ -1226,7 +1307,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top {
   background: var(--accent-color);
-  color: #0b0c10;
+  color: #ffffff;
   border: none;
   width: 40px;
   height: 40px;
@@ -1241,7 +1322,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(102, 252, 241, 0.3);
+  box-shadow: 0 6px 15px var(--accent-glow);
 }
 
 /* Mobile Responsiveness */
@@ -1421,3 +1502,76 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
   }
 }
+
+/* Custom Interactive Animations & Micro-Interactions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 28px var(--accent-color);
+  }
+}
+
+.glass-card {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 30px var(--accent-glow);
+}
+
+/* Glowing Title Line Animation */
+.section-title::after {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary), var(--accent-color));
+  background-size: 200% 100%;
+  animation: shimmerTitle 3s linear infinite;
+}
+
+@keyframes shimmerTitle {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Timeline Laser Line Animation */
+.timeline-container::after {
+  background: linear-gradient(180deg, transparent, var(--accent-color), var(--accent-secondary), transparent) !important;
+  background-size: 100% 200% !important;
+  box-shadow: 0 0 12px var(--accent-glow) !important;
+  animation: flowLaser 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes flowLaser {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.timeline-dot {
+  box-shadow: 0 0 10px var(--accent-glow) !important;
+  animation: dotPing 2s infinite ease-in-out !important;
+}
+
+@keyframes dotPing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--accent-glow);
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 20px var(--accent-color);
+  }
+}
+
+
