@@ -77,7 +77,7 @@ export default function Contact() {
               </div>
               <div className="contact-details">
                 <span>Current Location</span>
-                <p>Vadodara, Gujarat, India</p>
+                <p>Ahmedabad, Gujarat, India</p>
               </div>
             </div>
           </div>

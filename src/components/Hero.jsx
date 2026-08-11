@@ -59,7 +59,7 @@ export default function Hero() {
       output = JSON.stringify({
         name: "Krupa Sejani",
         role: "Flutter Developer",
-        location: "Vadodara, Gujarat",
+        location: "Ahmedabad, Gujarat",
         experience: "Arth Technology, Vadodara",
         apps_shipped: "10+ production apps",
         specialties: ["Clean Architecture", "REST APIs", "Firebase Real-time", "Push Notifications"]

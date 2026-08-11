@@ -51,7 +51,7 @@ export default function About() {
             <div className="about-info-grid">
               <div className="info-item">
                 <span>Location</span>
-                <strong>Vadodara, Gujarat</strong>
+                <strong>Ahmedabad, Gujarat</strong>
               </div>
               <div className="info-item">
                 <span>Email</span>
