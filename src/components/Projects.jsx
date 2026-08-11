@@ -25,12 +25,20 @@ export default function Projects() {
   const projectsData = [
     {
       title: "LinkArise CRM App",
-      subtitle: "Service, Lead, Task & Sales Management (All-in-One)",
-      description: "Unified CRM system covering lead tracking, client scheduling, task manager, and sales reporting. Integrates real-time notifications via Firebase Cloud Messaging.",
-      tags: ["Flutter", "Dart", "Firebase", "REST APIs"],
+      subtitle: "Service, Lead, Task, Sales & Location Management — All-in-One",
+      description: "Unified CRM system covering lead tracking, client scheduling, task management, sales reporting, and employee location tracking. Integrates real-time notifications using Firebase Cloud Messaging.",
+      tags: ["Flutter", "Dart", "Background Location", "Firebase FCM", "REST APIs", "Hive DB"],
       category: "crm",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      locationFeatures: [
+        { icon: "📍", title: "1-Min GPS Fetch", text: "Automatically fetches device location every 1 minute" },
+        { icon: "💾", title: "Local Persistence", text: "Stores lat, lng, accuracy, timestamp & user ID locally" },
+        { icon: "☁️", title: "5-Min Server Sync", text: "Uploads accumulated location records every 5 minutes" },
+        { icon: "🔄", title: "Background Service", text: "Continuous tracking while app is in background (Android/iOS)" },
+        { icon: "🔐", title: "Explicit Rationale", text: "Asks user for permission with clear explanation" },
+        { icon: "📊", title: "Manager History", text: "Server maintains location history for authorized managers" }
+      ]
     },
     {
       title: "LinkArise Telecalling CRM",
@@ -142,6 +150,22 @@ export default function Projects() {
                   {project.subtitle}
                 </h4>
                 <p className="project-description">{project.description}</p>
+
+                {project.locationFeatures && (
+                  <div className="project-location-features">
+                    <div className="location-features-title">
+                      ⚙️ Background Location Tracking Engine
+                    </div>
+                    <div className="location-features-grid">
+                      {project.locationFeatures.map((feat, fIdx) => (
+                        <div key={fIdx} className="location-feature-pill">
+                          <strong>{feat.icon} {feat.title}</strong>
+                          <span>{feat.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="project-links">
                 <a href={project.githubLink} className="project-link" target="_blank" rel="noopener noreferrer">
