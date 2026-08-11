@@ -31,14 +31,17 @@ export default function Projects() {
       category: "crm",
       demoLink: "#",
       githubLink: "#",
-      locationFeatures: [
-        { icon: "📍", title: "1-Min GPS Fetch", text: "Automatically fetches device location every 1 minute" },
-        { icon: "💾", title: "Local Persistence", text: "Stores lat, lng, accuracy, timestamp & user ID locally" },
-        { icon: "☁️", title: "5-Min Server Sync", text: "Uploads accumulated location records every 5 minutes" },
-        { icon: "🔄", title: "Background Service", text: "Continuous tracking while app is in background (Android/iOS)" },
-        { icon: "🔐", title: "Explicit Rationale", text: "Asks user for permission with clear explanation" },
-        { icon: "📊", title: "Manager History", text: "Server maintains location history for authorized managers" }
-      ]
+      featureBox: {
+        title: "⚙️ BACKGROUND LOCATION TRACKING ENGINE",
+        features: [
+          { icon: "📍", title: "1-Min GPS Fetch", text: "Automatically fetches device location every 1 minute" },
+          { icon: "💾", title: "Local Persistence", text: "Stores lat, lng, accuracy, timestamp & user ID locally" },
+          { icon: "☁️", title: "5-Min Server Sync", text: "Uploads accumulated location records every 5 minutes" },
+          { icon: "🔄", title: "Background Service", text: "Continuous tracking while app is in background (Android/iOS)" },
+          { icon: "🔐", title: "Explicit Rationale", text: "Asks user for permission with clear explanation" },
+          { icon: "📊", title: "Manager History", text: "Server maintains location history for authorized managers" }
+        ]
+      }
     },
     {
       title: "LinkArise Telecalling CRM",
@@ -47,7 +50,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "Local Storage", "Method Channels"],
       category: "crm",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "📞 TELECALLING & ANALYTICS ENGINE",
+        features: [
+          { icon: "📱", title: "SIM Dialer Routing", text: "Direct SIM call routing via native Method Channels" },
+          { icon: "📋", title: "Lead Log Tracking", text: "Real-time call status updates and activity history" },
+          { icon: "⏰", title: "Follow-up Scheduler", text: "Automated call reminders & follow-up queue engine" },
+          { icon: "📊", title: "Call Duration Analytics", text: "Automatic call duration logging and agent performance metrics" },
+          { icon: "💾", title: "Offline Storage", text: "Hive DB local storage for uninterrupted telecalling work" },
+          { icon: "🎨", title: "Dynamic UI Themes", text: "Customizable light & dark themes tailored for day/night shifts" }
+        ]
+      }
     },
     {
       title: "Forage Delivery App",
@@ -56,7 +70,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "Firebase Auth", "RazorPay SDK"],
       category: "delivery",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "🛒 DELIVERY & CHECKOUT ENGINE",
+        features: [
+          { icon: "🛍️", title: "Real-time Cart", text: "Instant cart management with automated price calculations" },
+          { icon: "📅", title: "Subscriptions", text: "Recurring food & grocery subscription scheduling" },
+          { icon: "💳", title: "RazorPay Gateway", text: "Secure multi-payment transaction gateway integration" },
+          { icon: "🔑", title: "SMS / OTP Auth", text: "Instant phone number authentication & Firebase verification" },
+          { icon: "🚀", title: "Live Order Status", text: "Real-time order tracking from kitchen to doorstep" },
+          { icon: "⭐", title: "Ratings & Reviews", text: "User feedback system with itemized ratings" }
+        ]
+      }
     },
     {
       title: "Aiik Society Management App",
@@ -65,7 +90,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "PDF Generator", "Hive Database"],
       category: "society",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "🏢 SOCIETY MANAGEMENT & LEDGER ENGINE",
+        features: [
+          { icon: "🧾", title: "Maintenance Billing", text: "Automated invoice generation & payment tracking" },
+          { icon: "📜", title: "Digital Notice Board", text: "Real-time community announcements & push alerts" },
+          { icon: "🎫", title: "Complaint Ticketing", text: "Structured resolution system for member grievances" },
+          { icon: "📄", title: "PDF Receipt Generator", text: "Instant generation of downloadable payment receipts" },
+          { icon: "📁", title: "Document Vault", text: "Secure society rulebooks & member document storage" },
+          { icon: "👥", title: "Member Directory", text: "Categorized resident list with contact permissions" }
+        ]
+      }
     },
     {
       title: "Forage Delivery Partner App",
@@ -74,7 +110,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "Google Maps API", "REST APIs"],
       category: "delivery",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "🚴 DRIVER ROUTING & DISPATCH ENGINE",
+        features: [
+          { icon: "🗺️", title: "Live GPS Tracking", text: "Google Maps API integration for active route guidance" },
+          { icon: "🔔", title: "Dispatch Alerts", text: "Instant order dispatch notifications for nearby drivers" },
+          { icon: "💰", title: "Payout Tracking", text: "Historical earnings summary and instant withdrawal requests" },
+          { icon: "🟢", title: "Status Toggle", text: "Online/Offline availability status for order assignments" },
+          { icon: "📦", title: "Proof of Delivery", text: "Photo upload & OTP confirmation upon delivery completion" },
+          { icon: "📊", title: "Trip Analytics", text: "Daily distance traveled and delivery completion rates" }
+        ]
+      }
     },
     {
       title: "Student Visa Process App",
@@ -83,7 +130,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "File Picker", "State Management"],
       category: "society",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "🎓 VISA TRACKING & DOCUMENT VAULT",
+        features: [
+          { icon: "📂", title: "Document Vault", text: "Encrypted file upload & verification status tracker" },
+          { icon: "🎯", title: "Aptitude Assessment", text: "Interactive eligibility quiz & score evaluator" },
+          { icon: "📌", title: "Application Tracker", text: "Stage-by-stage visa progress updates in real-time" },
+          { icon: "🏛️", title: "University Search", text: "Comprehensive college catalog with fee & course filters" },
+          { icon: "💼", title: "Work History Log", text: "Structured employment & academic background builder" },
+          { icon: "🔔", title: "Milestone Alerts", text: "Automated deadline notifications for visa steps" }
+        ]
+      }
     },
     {
       title: "Venue Booking App",
@@ -92,7 +150,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "Stripe API", "Google Maps"],
       category: "society",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "🎟️ RESERVATION & PAYMENT ENGINE",
+        features: [
+          { icon: "📅", title: "Dynamic Slot Picker", text: "Interactive date & hourly slot selection interface" },
+          { icon: "💳", title: "Stripe Payments", text: "Seamless online booking transactions & deposit holds" },
+          { icon: "📍", title: "Distance Filter", text: "Google Maps integration to find venues by radius" },
+          { icon: "🧾", title: "Digital Receipts", text: "Instant booking confirmation & QR code entry pass" },
+          { icon: "⭐", title: "User Reviews", text: "Verified guest ratings and photo review galleries" },
+          { icon: "🛡️", title: "Cancellation Policy", text: "Automated refund processing based on venue rules" }
+        ]
+      }
     },
     {
       title: "Forage Distributor App",
@@ -101,7 +170,18 @@ export default function Projects() {
       tags: ["Flutter", "Dart", "SQLite DB", "Excel Export"],
       category: "delivery",
       demoLink: "#",
-      githubLink: "#"
+      githubLink: "#",
+      featureBox: {
+        title: "📦 INVENTORY & SUPPLY CHAIN ENGINE",
+        features: [
+          { icon: "📑", title: "Purchase Orders", text: "Bulk order generation and supplier dispatch tracking" },
+          { icon: "🏪", title: "Retailer Registry", text: "Database of registered shop owners and credit limits" },
+          { icon: "📊", title: "Stock Volume Monitor", text: "Real-time inventory levels with low-stock warnings" },
+          { icon: "💵", title: "Payment Ledger", text: "Transaction logging with offline SQLite DB support" },
+          { icon: "📊", title: "Excel Export", text: "One-click export of sales reports and inventory logs" },
+          { icon: "🔄", title: "Auto-Reorder Queue", text: "Automated stock replenishment suggestions" }
+        ]
+      }
     }
   ];
 
@@ -151,13 +231,13 @@ export default function Projects() {
                 </h4>
                 <p className="project-description">{project.description}</p>
 
-                {project.locationFeatures && (
+                {project.featureBox && (
                   <div className="project-location-features">
                     <div className="location-features-title">
-                      ⚙️ Background Location Tracking Engine
+                      {project.featureBox.title}
                     </div>
                     <div className="location-features-grid">
-                      {project.locationFeatures.map((feat, fIdx) => (
+                      {project.featureBox.features.map((feat, fIdx) => (
                         <div key={fIdx} className="location-feature-pill">
                           <strong>{feat.icon} {feat.title}</strong>
                           <span>{feat.text}</span>
